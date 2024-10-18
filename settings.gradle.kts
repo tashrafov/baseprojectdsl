@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "BaseProjectDSL"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
+include(":common:modular-configuration")
