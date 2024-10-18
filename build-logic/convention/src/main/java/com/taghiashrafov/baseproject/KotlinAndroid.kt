@@ -18,11 +18,6 @@ internal fun Project.configureKotlinAndroid(
     extension: CommonExtension<*, *, *, *, *, *>,
 ) = extension.apply {
 
-    //get module name from module path
-    val moduleName = path.split(":").drop(2).joinToString(".")
-    namespace =
-        if (moduleName.isNotEmpty()) "com.taghiashrafov.app.$moduleName" else "com.taghiashrafov.app"
-
     compileSdk = libs.findVersion("compileSdk").get().requiredVersion.toInt()
     defaultConfig {
         minSdk = libs.findVersion("minSdk").get().requiredVersion.toInt()
