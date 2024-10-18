@@ -35,6 +35,8 @@ android {
 
 dependencies {
     implementation(projects.common.modularConfiguration)
+    implementation(projects.common.cache.cacheApi)
+    implementation(projects.common.cache.cacheImpl)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

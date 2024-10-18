@@ -8,8 +8,8 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AppModule::class,
-//        AppDependenciesModule::class,
-//        AppApiModule::class
+        AppDependenciesModule::class,
+        AppApiModule::class
     ]
 )
 @Singleton
@@ -20,6 +20,8 @@ interface ApplicationComponent {
             return DaggerApplicationComponent
                 .builder()
                 .appModule(AppModule(app))
+                .appDependenciesModule(AppDependenciesModule())
+                .appApiModule(AppApiModule())
                 .build()
         }
     }
