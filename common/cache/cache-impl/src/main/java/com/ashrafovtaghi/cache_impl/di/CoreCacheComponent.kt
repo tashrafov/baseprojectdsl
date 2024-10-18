@@ -11,7 +11,7 @@ import javax.inject.Singleton
 @Singleton
 interface CoreCacheComponent : CacheApi {
     companion object {
-        fun initAndGet(dependencies: CoreCacheDependencies): CoreCacheComponent ?{
+        fun initAndGet(dependencies: CoreCacheDependencies): CoreCacheComponent {
             return DaggerCoreCacheComponent
                 .factory()
                 .create(dependencies)
